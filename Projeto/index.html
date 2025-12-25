@@ -1,118 +1,146 @@
 <!DOCTYPE html>
 <!--
-  Declaração do documento HTML5.
-  Define que o navegador deve interpretar o conteúdo como HTML moderno.
+  Declara o tipo do documento como HTML5.
+  Garante que o navegador utilize o modo de renderização moderno.
 -->
 <html lang="en">
 <head>
     <!--
       Define o conjunto de caracteres como UTF-8,
-      garantindo suporte a acentos e caracteres especiais.
+      permitindo o uso correto de acentos e caracteres especiais.
     -->
     <meta charset="UTF-8">
 
     <!--
-      Configura a viewport para tornar o layout responsivo,
-      ajustando a escala conforme o tamanho do dispositivo.
+      Configura a viewport para responsividade.
+      Faz com que o layout se adapte corretamente a diferentes tamanhos de tela.
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--
-      Importa o arquivo de estilos externo.
-      Toda a lógica visual do projeto está centralizada no style.css.
+      Importa o arquivo CSS externo.
+      Toda a lógica visual, layout e animações estão centralizadas no style.css.
     -->
     <link rel="stylesheet" href="style.css">
 
-    <title>Landing Page CSS</title>
+    <!--
+      Título exibido na aba do navegador.
+    -->
+    <title>Document</title>
 </head>
 <body>
 
     <!--
-      HEADER PRINCIPAL
+      HEADER PRINCIPAL (Hero Section)
       Contém o menu hamburguer, título, subtítulo e links sociais.
     -->
     <header class="header-wrapper">
 
         <!--
-          Container do menu hamburguer.
-          Responsável por agrupar o checkbox, o ícone e os itens do menu.
+          Div auxiliar para organização interna do header.
+          Usada para controle de posicionamento via CSS.
         -->
-        <div class="checkbox-container">
-            <div class="checkbox-wrapper">
+        <div class="header">
 
-                <!--
-                  Input do tipo checkbox utilizado como controlador de estado.
-                  Quando marcado, dispara animações CSS através do seletor :checked.
-                -->
-                <input type="checkbox" id="toggle">
-
-                <!--
-                  Label associado ao checkbox.
-                  Visualmente representa o botão do menu hamburguer.
-                -->
-                <label class="checkbox" for="toggle">
+            <!--
+              Container geral do menu hamburguer.
+              Agrupa todos os elementos responsáveis pelo menu animado.
+            -->
+            <div class="checkbox-container">
+                <div class="checkbox-wrapper">
 
                     <!--
-                      Cada div.trace representa uma linha do ícone hamburguer.
-                      Elas serão animadas para formar um "X".
+                      Input do tipo checkbox utilizado como controlador de estado.
+                      Quando marcado (:checked), ativa animações e exibe o menu via CSS.
+                      Não há uso de JavaScript neste controle.
                     -->
-                    <div class="trace"></div>
-                    <div class="trace"></div>
-                    <div class="trace"></div>
-                </label>
+                    <input type="checkbox" id="toggle">
 
-                <!--
-                  Elemento visual que se expande como um círculo,
-                  criando o efeito de abertura do menu.
-                -->
-                <div class="menu"></div>
+                    <!--
+                      Label associado ao checkbox.
+                      Funciona como o botão visual do menu hamburguer.
+                    -->
+                    <label class="checkbox" for="toggle">
 
-                <!--
-                  Navegação principal.
-                  Inicialmente invisível, torna-se visível quando o menu é ativado.
-                -->
-                <nav class="menu-items">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Projetos</a></li>
-                    </ul>
-                </nav>
+                        <!--
+                          Cada div.trace representa uma linha do ícone hamburguer.
+                          Essas linhas serão transformadas em um "X" via CSS.
+                        -->
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                    </label>
 
+                    <!--
+                      Elemento visual responsável pelo efeito de expansão circular.
+                      Utiliza box-shadow e unidades relativas à viewport (vmax)
+                      para criar o efeito de morphing do menu.
+                    -->
+                    <div class="menu"></div>
+
+                    <!--
+                      Navegação principal do site.
+                      Inicialmente oculta, torna-se visível quando o menu é ativado.
+                    -->
+                    <nav class="menu-items">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#">Projetos</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
             </div>
         </div>
 
         <!--
           Título principal da landing page.
+          Normalmente representa o nome do desenvolvedor ou do projeto.
         -->
         <h1>Arthur Haerdy</h1>
 
         <!--
-          Subtítulo indicando a área de atuação.
+          Subtítulo com a área de atuação profissional.
         -->
         <h2>Front-end Developer</h2>
 
         <!--
-          Links para redes sociais.
+          Seção de links para redes sociais.
         -->
         <div class="social-media">
             <a href="#">Linkedin</a>
             <a href="#">Github</a>
         </div>
-
     </header>
 
     <!--
-      CONTEÚDO PRINCIPAL
-      Seção que contém os cards interativos.
+      CONTEÚDO PRINCIPAL DA PÁGINA
+      Contém os cards informativos com efeito visual.
     -->
     <div class="container">
 
-        <!-- Card 1 -->
+        <!--
+          CARD 1
+          Estrutura composta por texto descritivo e card visual interativo.
+        -->
         <div class="card-container">
+
+            <!-- Texto descritivo associado ao card -->
             <div class="card-text">
-                Texto descritivo associado ao card.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+                consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+                consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
             </div>
+
+            <!-- Card visual com imagem de fundo -->
             <div class="card">
                 <div class="card-wrapper">
                     <h2>Github</h2>
@@ -121,24 +149,41 @@
             </div>
         </div>
 
-        <!-- Card 2 -->
+        <!--
+          CARD 2
+          Estrutura invertida em relação ao primeiro,
+          criando variação visual no layout.
+        -->
         <div class="card-container">
+
             <div class="card">
                 <div class="card-wrapper">
                     <h2>Linkedin</h2>
                     <p>Vem ver minha carreira profissional!</p>
                 </div>
             </div>
+
             <div class="card-text">
-                Texto descritivo associado ao card.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+                consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+                consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
             </div>
         </div>
 
-        <!-- Card 3 -->
+        <!--
+          CARD 3
+          Repete o padrão estrutural do primeiro card.
+        -->
         <div class="card-container">
+
             <div class="card-text">
-                Texto descritivo associado ao card.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+                consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+                consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
             </div>
+
             <div class="card">
                 <div class="card-wrapper">
                     <h2>Instagram</h2>
@@ -146,11 +191,11 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <!--
       Rodapé da página.
+      Geralmente utilizado para créditos ou informações finais.
     -->
     <footer class="footer">
         Feito por Arthur Haerdy
