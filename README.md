@@ -2,7 +2,7 @@
 
 Este repositório contém o projeto desenvolvido durante o curso  **“Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions”**,  ministrado por **Gabriela Pinheiro** na plataforma **DIO (Digital Innovation One)**.
 
-O projeto tem como objetivo consolidar conceitos fundamentais de **estruturação HTML**, **estilização com CSS**, **animações**, **transições** e **responsividade**, sem utilização de JavaScript.
+O projeto tem como objetivo consolidar conceitos de **estruturação HTML**, **estilização com CSS**, **animações**, **transições** e **responsividade**, sem utilização de JavaScript.
 
 ---
 
