@@ -1,0 +1,337 @@
+/*
+  Importa a fonte "Amatic SC" do Google Fonts.
+  Essa fonte será utilizada em todo o projeto,
+  garantindo identidade visual e tipografia personalizada.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+/* ================= RESET E ESTILO GLOBAL ================= */
+
+/*
+  Estilização global aplicada ao elemento body.
+  Define comportamento padrão para toda a página.
+*/
+body {
+    /* Remove margens padrão do navegador */
+    margin: 0;
+
+    /* Remove espaçamentos internos padrão */
+    padding: 0;
+
+    /* Define a cor padrão do texto */
+    color: #ffffff;
+
+    /* Aplica a fonte importada como padrão do projeto */
+    font-family: 'Amatic SC', sans-serif;
+}
+
+/* ================= HEADER / HERO SECTION ================= */
+
+/*
+  Container principal do header (hero section).
+  Ocupa 100% da largura e altura da viewport.
+*/
+.header-wrapper {
+    /* Altura total da janela do navegador */
+    height: 100vh;
+
+    /* Largura total da janela do navegador */
+    width: 100vw;
+
+    /*
+      Gradiente linear com múltiplas cores.
+      O ângulo negativo cria um efeito mais dinâmico.
+    */
+    background: linear-gradient(
+        -45deg,
+        #050404,
+        #2E1C2B,
+        #4A1942,
+        #893168
+    );
+
+    /*
+      Define um tamanho maior que o container
+      para permitir movimentação do gradiente.
+    */
+    background-size: 400% 400%;
+
+    /*
+      Flexbox para centralizar conteúdo vertical e horizontalmente.
+    */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*
+      Aplica animação contínua ao fundo,
+      criando o efeito de transição de cores.
+    */
+    animation: backgroundTransition 8s ease-in-out infinite;
+
+    /*
+      Position relative permite posicionar
+      elementos filhos com position absolute.
+    */
+    position: relative;
+}
+
+/* ================= TÍTULOS ================= */
+
+/*
+  Estilização comum aplicada aos títulos h1 e h2.
+*/
+h1,
+h2 {
+    /* Transforma todo o texto em maiúsculas */
+    text-transform: uppercase;
+
+    /* Aumenta o espaçamento entre letras */
+    letter-spacing: 4px;
+}
+
+/* ================= LINKS DE REDES SOCIAIS ================= */
+
+/*
+  Container dos links sociais.
+*/
+.social-media {
+    /* Espaçamento superior em relação ao título */
+    margin-top: 1rem;
+
+    /* Exibe os links lado a lado */
+    display: flex;
+}
+
+/*
+  Estilo base dos links.
+*/
+.social-media a {
+    /* Remove sublinhado padrão dos links */
+    text-decoration: none;
+
+    /* Define a cor do texto */
+    color: #ffffff;
+
+    /* Define o tamanho da fonte */
+    font-size: 24px;
+
+    /* Espaçamento interno (top/bottom e left/right) */
+    padding: 1rem 4rem;
+
+    /* Borda branca para destaque visual */
+    border: 1px solid #ffffff;
+
+    /*
+      Define transição suave para hover,
+      usando uma curva cubic-bezier personalizada.
+    */
+    transition: .5s cubic-bezier(
+        0.55,
+        0.025,
+        0.675,
+        0.97
+    );
+}
+
+/*
+  Efeito hover aplicado a todos os links da página.
+*/
+a:hover {
+    /* Altera a cor do texto ao passar o mouse */
+    color: #2E1C2B;
+
+    /* Altera a cor de fundo */
+    background-color: #ffffff;
+}
+
+/* ================= ANIMAÇÃO DO BACKGROUND ================= */
+
+/*
+  Keyframes responsáveis pela animação do gradiente.
+  A posição do background é alterada ao longo do tempo.
+*/
+@keyframes backgroundTransition {
+    0% {
+        background-position: 0% 80%;
+    }
+
+    50% {
+        background-position: 80% 100%;
+    }
+
+    100% {
+        background-position: 0% 90%;
+    }
+}
+
+/* ================= MENU HAMBURGUER ================= */
+
+/*
+  Input checkbox responsável por controlar o estado do menu.
+  Ele fica invisível, mas funcional.
+*/
+#toggle {
+    /* Oculta o checkbox da interface */
+    display: none;
+}
+
+/*
+  Botão visual do menu hamburguer.
+  É o label associado ao checkbox.
+*/
+.checkbox {
+    /* Dimensões do botão */
+    height: 100px;
+    width: 100px;
+
+    /* Posiciona no canto superior direito */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* Centraliza os traços internamente */
+    display: flex;
+    justify-content: center;
+
+    /* Indica interatividade */
+    cursor: pointer;
+
+    /* Mantém o botão acima dos outros elementos */
+    z-index: 9999;
+}
+
+/*
+  Traços que formam o ícone hamburguer.
+*/
+.checkbox .trace {
+    /* Largura do traço */
+    width: 50px;
+
+    /* Altura fina para aparência de linha */
+    height: 2px;
+
+    /* Cor branca */
+    background-color: white;
+
+    /* Permite posicionamento independente */
+    position: absolute;
+
+    /* Bordas levemente arredondadas */
+    border-radius: 4px;
+
+    /* Transição suave para transformações */
+    transition: 0.5s ease-in-out;
+}
+
+/*
+  Posicionamento inicial de cada traço.
+*/
+.checkbox .trace:nth-child(1) {
+    top: 26px;
+}
+
+.checkbox .trace:nth-child(2) {
+    top: 46px;
+}
+
+.checkbox .trace:nth-child(3) {
+    top: 66px;
+}
+
+/* ================= ANIMAÇÃO DO MENU ================= */
+
+/*
+  Quando o checkbox está marcado,
+  o primeiro traço gira para formar parte do "X".
+*/
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+/*
+  O segundo traço desaparece,
+  criando espaço visual para o "X".
+*/
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+/*
+  O terceiro traço gira em sentido oposto,
+  completando o formato de "X".
+*/
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+/* ================= CONTEÚDO / CARDS ================= */
+
+/*
+  Container principal dos cards.
+*/
+.container {
+    /* Ocupa toda a largura disponível */
+    width: 100%;
+
+    /* Organiza os cards em coluna */
+    display: flex;
+    flex-direction: column;
+
+    /* Centraliza os cards horizontalmente */
+    align-items: center;
+}
+
+/*
+  Estilo base dos cards.
+*/
+.card {
+    /* Altura do card */
+    height: 300px;
+
+    /* Largura do card */
+    width: 400px;
+
+    /* Imagem de fundo */
+    background-image: url('./room.jpg');
+
+    /* Ajusta a imagem ao tamanho do card */
+    background-size: cover;
+
+    /* Aplica efeito de escala de cinza */
+    filter: grayscale(0.5);
+
+    /* Transição suave para hover */
+    transition: 0.3s;
+}
+
+/*
+  Remove o filtro quando o usuário passa o mouse.
+*/
+.card:hover {
+    filter: unset;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+/*
+  Media query aplicada a telas menores que 800px.
+  Ajusta layout para dispositivos móveis.
+*/
+@media (max-width: 800px) {
+
+    /* Empilha os links sociais verticalmente */
+    .social-media {
+        flex-direction: column;
+    }
+
+    /* Reduz o tamanho dos cards */
+    .card {
+        height: 250px;
+        width: 250px;
+    }
+}

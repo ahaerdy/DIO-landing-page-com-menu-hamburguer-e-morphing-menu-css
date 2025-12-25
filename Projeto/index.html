@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+  Declaração do documento HTML5.
+  Define que o navegador deve interpretar o conteúdo como HTML moderno.
+-->
+<html lang="en">
+<head>
+    <!--
+      Define o conjunto de caracteres como UTF-8,
+      garantindo suporte a acentos e caracteres especiais.
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+      Configura a viewport para tornar o layout responsivo,
+      ajustando a escala conforme o tamanho do dispositivo.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+      Importa o arquivo de estilos externo.
+      Toda a lógica visual do projeto está centralizada no style.css.
+    -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Landing Page CSS</title>
+</head>
+<body>
+
+    <!--
+      HEADER PRINCIPAL
+      Contém o menu hamburguer, título, subtítulo e links sociais.
+    -->
+    <header class="header-wrapper">
+
+        <!--
+          Container do menu hamburguer.
+          Responsável por agrupar o checkbox, o ícone e os itens do menu.
+        -->
+        <div class="checkbox-container">
+            <div class="checkbox-wrapper">
+
+                <!--
+                  Input do tipo checkbox utilizado como controlador de estado.
+                  Quando marcado, dispara animações CSS através do seletor :checked.
+                -->
+                <input type="checkbox" id="toggle">
+
+                <!--
+                  Label associado ao checkbox.
+                  Visualmente representa o botão do menu hamburguer.
+                -->
+                <label class="checkbox" for="toggle">
+
+                    <!--
+                      Cada div.trace representa uma linha do ícone hamburguer.
+                      Elas serão animadas para formar um "X".
+                    -->
+                    <div class="trace"></div>
+                    <div class="trace"></div>
+                    <div class="trace"></div>
+                </label>
+
+                <!--
+                  Elemento visual que se expande como um círculo,
+                  criando o efeito de abertura do menu.
+                -->
+                <div class="menu"></div>
+
+                <!--
+                  Navegação principal.
+                  Inicialmente invisível, torna-se visível quando o menu é ativado.
+                -->
+                <nav class="menu-items">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Projetos</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+        <!--
+          Título principal da landing page.
+        -->
+        <h1>Arthur Haerdy</h1>
+
+        <!--
+          Subtítulo indicando a área de atuação.
+        -->
+        <h2>Front-end Developer</h2>
+
+        <!--
+          Links para redes sociais.
+        -->
+        <div class="social-media">
+            <a href="#">Linkedin</a>
+            <a href="#">Github</a>
+        </div>
+
+    </header>
+
+    <!--
+      CONTEÚDO PRINCIPAL
+      Seção que contém os cards interativos.
+    -->
+    <div class="container">
+
+        <!-- Card 1 -->
+        <div class="card-container">
+            <div class="card-text">
+                Texto descritivo associado ao card.
+            </div>
+            <div class="card">
+                <div class="card-wrapper">
+                    <h2>Github</h2>
+                    <p>Veja meus projetos!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-wrapper">
+                    <h2>Linkedin</h2>
+                    <p>Vem ver minha carreira profissional!</p>
+                </div>
+            </div>
+            <div class="card-text">
+                Texto descritivo associado ao card.
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-container">
+            <div class="card-text">
+                Texto descritivo associado ao card.
+            </div>
+            <div class="card">
+                <div class="card-wrapper">
+                    <h2>Instagram</h2>
+                    <p>Ou mais do meu dia-a-dia ;)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--
+      Rodapé da página.
+    -->
+    <footer class="footer">
+        Feito por Arthur Haerdy
+    </footer>
+
+</body>
+</html>
