@@ -47,7 +47,7 @@ Este projeto consiste em uma **landing page responsiva** construída exclusivame
 
 > Ao clicar no ícone hamburguer, um círculo branco expande cobrindo toda a tela (morphing), os três traços se transformam em um "X" e o menu de navegação torna-se visível — tudo controlado exclusivamente por CSS.
 
-![Landing Page — Menu aberto com efeito morphing](./000-Midia_e_Anexos/captura_02.jpg)
+![Landing Page — Menu aberto com efeito morphing](./000-Midia_e_Anexos/captura_002.jpg)
 
 ---
 
