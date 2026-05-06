@@ -1,7 +1,5 @@
 # Landing Page com Menu Hamburguer e Morphing Menu (CSS)
 
-## Visão Geral do Projeto
-
 Este projeto consiste em uma **landing page responsiva** construída exclusivamente com **HTML5 e CSS3**, sem nenhuma linha de JavaScript. O objetivo central foi demonstrar o domínio de recursos avançados de CSS para controle de estado, animações e interatividade — competências que comprovam maturidade técnica em desenvolvimento front-end.
 
 ---
